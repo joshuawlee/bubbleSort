@@ -1,0 +1,29 @@
+// Add your code below:
+var unsortedArray = [String]()
+while let line = readLine() {
+    unsortedArray.append(line)
+}
+
+func swap(integers: inout [String], firstIndex: Int, secondIndex: Int) {
+    let swaps = integers[firstIndex]
+    integers[firstIndex] = integers[secondIndex]
+    integers[secondIndex] = swaps
+}
+//performs sort
+func sort (array: inout [String]) {
+    //setting variables
+    for x in 0..<unsortedArray.count {
+        for y in 1..<unsortedArray.count - x {
+            if(unsortedArray[y] < unsortedArray[y-1]) {
+                //saves amount sorted
+                swap(integers: &unsortedArray, firstIndex:y, secondIndex:y-1)
+            }
+        }
+                //prints each time its sorted
+        
+    }
+    print(unsortedArray)
+}
+        
+sort(array: &unsortedArray)
+
