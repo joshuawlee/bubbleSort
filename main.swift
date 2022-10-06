@@ -19,7 +19,7 @@ func sort (array: inout [String]) {
                 swap(integers: &array, firstIndex:y, secondIndex:y-1)
             }
         }
-                //prints each time its sorted
+                
         
     }
     print(array)
